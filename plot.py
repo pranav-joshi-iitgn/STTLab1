@@ -20,14 +20,14 @@ if __name__ == "__main__":
     y3 = 2*x - 1
     plt.plot(x,y3)
     L.append(r"$ y = 2x-1 $")
-    p = 1009 # a very large prime
-    t = 2
+    P = 1009 # a very large prime
+    T = 2
     randns = []
     for i in range(1000):
-        randns.append(t)
-        t = (t+1)**2 % p
+        randns.append(T)
+        T = (T+1)**2 % P
     h = np.array(randns)
-    h = 1000 * h/p
+    h = 1000 * h/P
     plt.scatter(x,h,s=0.1)
     L.append("scatter")
     plt.legend(L)
